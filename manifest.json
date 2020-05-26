@@ -1,0 +1,112 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.5",
+    "version": "1.0.0",
+    "id": "e2a11b91-684b-4695-b010-8fc8627873d0",
+    "packageName": "com.example.teamsbot",
+    "devicePermissions": [
+        "geolocation",
+        "media"
+    ],
+    "developer": {
+        "name": "Rick",
+        "websiteUrl": "https://www.microsoft.com",
+        "privacyUrl": "https://www.teams.com/privacy",
+        "termsOfUseUrl": "https://www.teams.com/termsofuser"
+    },
+    "icons": {
+        "outline": "icon-outline.png",
+        "color": "icon-color.png"
+    },
+    "localizationInfo": {
+        "defaultLanguageTag": "en-us",
+        "additionalLanguages": [
+            {
+                "languageTag": "es-es",
+                "file": "en-us.json"
+            }
+        ]
+    },
+    "name": {
+        "short": "Teams_NotifyU",
+        "full": "Teams_NotifyU"
+    },
+    "description": {
+        "short": "Teams_Bot",
+        "full": "Teams_Bot"
+    },
+    "accentColor": "#FFFFFF",
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://contoso.com/teamstab/configure",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team",
+                "groupchat"
+            ]
+        }
+    ],
+    "staticTabs": [
+        {
+            "entityId": "idForPage",
+            "name": "Display name of tab",
+            "contentUrl": "https://contoso.com/content?host=msteams",
+            "websiteUrl": "https://contoso.com/content",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "bots": [
+        {
+            "botId": "e2a11b91-684b-4695-b010-8fc8627873d0",
+            "needsChannelSelector": false,
+            "isNotificationOnly": false,
+            "scopes": [
+                "team",
+                "personal",
+                "groupchat"
+            ],
+            "supportsFiles": true,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "team",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "Command 1",
+                            "description": "Description of Command 1"
+                        },
+                        {
+                            "title": "Command N",
+                            "description": "Description of Command N"
+                        }
+                    ]
+                },
+                {
+                    "scopes": [
+                        "personal",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "Personal command 1",
+                            "description": "Description of Personal command 1"
+                        },
+                        {
+                            "title": "Personal command N",
+                            "description": "Description of Personal command N"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}
